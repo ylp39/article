@@ -15,7 +15,7 @@ class ArticleController extends AdminController
      *
      * @var string
      */
-    protected $title = 'App\Models\Article';
+    protected $title = '文章';
 
     /**
      * Make a grid builder.
@@ -26,11 +26,11 @@ class ArticleController extends AdminController
     {
         $grid = new Grid(new Article);
 
-        $grid->column('id', __('Id'));
-        $grid->column('title', __('Title'));
-        $grid->column('content', __('Content'));
-        $grid->column('created_at', __('Created at'));
-        $grid->column('updated_at', __('Updated at'));
+        $grid->column('id', __('序号'));
+        $grid->column('title', __('标题'));
+        $grid->column('content', __('内容'));
+        $grid->column('created_at', __('创建时间'));
+        $grid->column('updated_at', __('更新时间'));
 
         return $grid;
     }
