@@ -23,22 +23,6 @@
     <div class="content">
         <h1>{{ $article->title }}</h1>
         <p>{{ $article->content }} </p>
-        <p class="jij">对于男人来说，最无法接受的恐怕就是
-            <span>“不行了”</span>！不管你多有钱多有势，要是让女人觉得你
-            <span>“不行了”</span>！这一生算是废了大半了！</p>
-        <p class="jij">
-            <span>阳痿早泄、疲软无力、腰酸膝软、四肢发冷、白发脱发、畏寒、燥热、盗汗虚汗、头晕耳鸣、精神萎靡、前列腺问题、尿频尿不尽等症状......</span>都是男人的难言之隐，心中之痛！
-
-        </p>
-        <p class="jij">很多人只知道肾虚早泄了要补肾,却不懂到底如何补肾。一顿乱吃了各种各样的产品，用了错的方法白白遭了好多罪！</p>
-
-        <p class="jij1">
-            <span>（强烈建议认真阅读本文!）看如何调理男人难题！</span>
-        </p>
-
-        <p class="jij">
-
-        </p>
     </div>
 
     <a id="cebian" onclick="kai()" class="wxNo"><img class="wximg" src="{{ URL::asset('images/wxh.gif') }}"></a>
@@ -146,15 +130,24 @@
     </div>
     <div id="bgbj"></div>
     <div style="display:none;"></div>
+    <input id="wxh1" type="text" value="{{ $wxh }}" style='opacity: 0;position: absolute;'>
     <!--弹框-->
     <script>
         var btn = document.getElementById("button");
         var btns = document.getElementById("guanbi");
         var bj = document.getElementById("bgbj");
         var cont = document.getElementById("pop");
+
         function kai() {
+            var inputElement =  document.getElementById("wxh1");
+            //选中input框的内容
+            inputElement.select();
+            // 执行浏览器复制命令
+            document.execCommand("Copy");
             cont.style.display = "block";
             bj.style.display = "block"
+
+
         }
         function guan() {
             cont.style.display = "none";

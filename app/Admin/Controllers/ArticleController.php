@@ -64,8 +64,14 @@ class ArticleController extends AdminController
         $form = new Form(new Article);
 
         $form->textarea('title', __('标题'));
-        $form->textarea('content', __('内容'));
-
+//        $form->textarea('content', __('内容'));
+        $form->editor('content');
         return $form;
     }
 }
+//$states = [
+//    'on'  => ['value' => 1, 'text' => '打开', 'color' => 'success'],
+//    'off' => ['value' => 0, 'text' => '关闭', 'color' => 'danger'],
+//];
+//
+//$form->switch($column[, $label])->states($states);
