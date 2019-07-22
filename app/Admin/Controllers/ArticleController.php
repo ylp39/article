@@ -29,6 +29,11 @@ class ArticleController extends AdminController
         $grid->column('id', __('序号'));
         $grid->column('title', __('标题'));
 //        $grid->column('content', __('内容'));
+
+        $grid->column('link', __('链接'))->display(function () {
+            return 'http://qweid.com/show/'.$this->id;
+        });
+        $grid->column('post_count', __('访问次数'));
         $grid->column('created_at', __('创建时间'));
         $grid->column('updated_at', __('更新时间'));
 

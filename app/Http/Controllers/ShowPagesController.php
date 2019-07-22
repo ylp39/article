@@ -13,6 +13,7 @@ class ShowPagesController extends Controller
     {
         $WX = Wxh::where('use', 1)->first();
         $wxh = $WX->wxh;
+        $article->increment('post_count');
 
 
         return  view('pages.show', compact('article','wxh'));
