@@ -28,7 +28,7 @@ class ArticleController extends AdminController
 
         $grid->column('id', __('序号'));
         $grid->column('title', __('标题'));
-        $grid->column('content', __('内容'));
+//        $grid->column('content', __('内容'));
         $grid->column('created_at', __('创建时间'));
         $grid->column('updated_at', __('更新时间'));
 
