@@ -20,9 +20,28 @@
         }
 
     </style>
+    <script type="text/javascript">
+        window.onload=function()
+        {
+            //第一步是先获取服务器传过来的图文信息值
+            var info1 = document.getElementById("content1").value;
+            //把图文信息的值通过innerHTML赋值给编辑器
+            document.getElementById("info2").innerHTML=info1;
+
+        }
+    </script>
+
+
+
+
+    <input class="input-xlarge focused" style="float:left;" name="content" type="hidden" id="content1" value="{{  $article->content }}" >
+
     <div class="content">
         <h1>{{ $article->title }}</h1>
-        <p>{{ $article->content }} </p>
+        <div id="info1" class="text" > <!--可使用 min-height 实现编辑区域自动增加高度-->
+            <div id="info2">
+            </div>
+        </div>
     </div>
 
     <a id="cebian" onclick="kai()" class="wxNo"><img class="wximg" src="{{ URL::asset('images/wxh.gif') }}"></a>
